@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #f0f0f0; /* Light grey text */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; /* Ensure heading is above main content */
+    align-items: center;
+    min-height: 100vh;
+    background: #121212; /* Dark background */
+}
+
+/* Heading Styles */
+h1.heading {
+    text-align: center;
+    background-color: #2c2c2c; /* Dark grey background */
+    color: #f0f0f0; /* Light grey text */
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 100%;
+    max-width: 1200px; /* Ensure the heading doesn’t stretch too wide */
+    margin-bottom: 2rem; /* Space below the heading */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-out;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+/* Main Content Styles */
+.main_content {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 2rem;
+    background: rgba(38, 38, 38, 0.8); /* Dark frosted glass effect */
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px); /* Enhanced frosted glass effect */
+    width: 100%;
+    max-width: 1200px; /* Prevents it from stretching too wide */
+}
+
+/* File Input Styles */
+.file_input_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border: 2px solid #555; /* Dark grey border */
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+    background-color: rgba(38, 38, 38, 0.8); /* Dark frosted glass effect */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Light shadow for depth */
+}
+
+#choose_file_button {
+    background: linear-gradient(to bottom, #666, #444); /* Gradient background */
+    color: #f0f0f0; /* Light grey text */
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+#choose_file_button:hover {
+    background: linear-gradient(to bottom, #555, #333); /* Darker gradient on hover */
+    transform: scale(1.05);
+}
+
+#choose_file_button:focus {
+    outline: none;
+    background: linear-gradient(to bottom, #555, #333); /* Darker gradient on focus */
+}
+
+#choose_file_button:active {
+    background: linear-gradient(to bottom, #444, #222); /* Even darker gradient on active */
+}
+
+#file_name {
+    margin-left: 1rem;
+    color: #aaa; /* Light grey */
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Image Box Styles */
+.image_box {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    border: 2px dashed #555; /* Dark grey border */
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    position: relative; /* Added for text positioning */
+    background: rgba(38, 38, 38, 0.9); /* Dark frosted glass effect */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem; /* Add space below each image box */
+}
+
+.image_box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Text Positioning */
+.image_text {
+    position: absolute;
+    top: -40px; /* Adjust this based on your layout */
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f0f0f0; /* Light grey text */
+    background: rgba(38, 38, 38, 0.8); /* Dark frosted glass effect */
+    padding: 0 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Image Styles */
+#original_image_container img, 
+#compressed_image_container img {
+    max-width: 100%;
+    max-height: 300px;
+    width: auto; 
+    height: 300px; /* Fixed height for both images */
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+#compressed_image_container img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#compressed_image_container img:hover {
+    transform: scale(1.05);
+}
+
+/* Info Display Styles */
+#original_size, 
+#compressed_size, 
+#compression_percentage {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #aaa; /* Light grey */
+}
+
+#resolution {
+    font-size: 0.9rem;
+    color: #888; /* Darker grey */
+}
+
+/* Download Button Styles */
+#download_button {
+    background: linear-gradient(to bottom, #333, #555); /* Gradient background */
+    color: #f0f0f0; /* Light grey text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+#download_button:hover {
+    background: linear-gradient(to bottom, #555, #777); /* Lighter gradient on hover */
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .main_content {
+        padding: 1rem;
+    }
+
+    h1.heading {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .file_input_container {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .image_box {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1.heading {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .file_input_container {
+        font-size: 1rem;
+    }
+
+    span {
+        font-size: 1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

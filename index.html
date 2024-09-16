@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1 class="heading">Image Compressor</h1>
+
+    <div class="main_content">
+        <div class="file_input_container">
+            <button id="choose_file_button">Choose File</button>
+            <input type="file" id="my_image" style="display: none;">
+            <span id="file_name"></span>
+        </div>
+
+        <div class="container">
+            <div class="image_box" id="original_box">
+                <div class="image_text" id="original_text">Original Image</div>
+                <div id="original_image_container"></div>
+                <span id="original_size"></span>
+            </div>
+
+            <div class="image_box" id="compressed_box">
+                <div class="image_text" id="compressed_text">Compressed Image</div>
+                <div id="compressed_image_container"></div>
+                <span id="compressed_size"></span>
+                <span id="compression_percentage"></span>
+                <button id="download_button" style="display: none;">Download Compressed Image</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
