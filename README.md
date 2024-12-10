@@ -1,5 +1,3 @@
-readme_content = """
-
 # Image Compressor Website
 
 
@@ -130,7 +128,7 @@ Welcome to the **Image Compressor Website**, a fast, privacy-friendly, and ad-fr
 
 ├── script.js             # JavaScript for functionality
 
-
+```
 🖥️ Technologies Used
 
     HTML5: For the structure and layout of the website.
