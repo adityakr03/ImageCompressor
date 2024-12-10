@@ -1,9 +1,3 @@
-# Creating a README file for the Image Compressor website and compressing it into a zip for download.
-
-
-
-# Define the content of the README.md file
-
 readme_content = """
 
 # Image Compressor Website
