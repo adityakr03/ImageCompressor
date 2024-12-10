@@ -130,16 +130,14 @@ Welcome to the **Image Compressor Website**, a fast, privacy-friendly, and ad-fr
 
 ```
 🖥️ Technologies Used
-
+```
     HTML5: For the structure and layout of the website.
     CSS3: For the design, responsiveness, and styling.
     JavaScript: For the core functionality of image compression and download.
-
+```
 🚀 Getting Started
 
     Clone this repository:
-
-Always show details
 
     git clone https://github.com/your-username/image-compressor.git
 
