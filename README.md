@@ -1,5 +1,3 @@
-Here's the revised **README.md** content for your Image Compressor Website, tailored as per the updated details:
-
 ---
 
 # Image Compressor Website 📷✨
